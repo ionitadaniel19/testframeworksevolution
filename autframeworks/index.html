@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<script language="javascript">
+
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.login.value == "test" && form.password.value == "test")
+  {
+   /* window.open('testframeworks.html','_self');/*opens the target page while Id & password matches*/
+   location="testframeworks.html";
+  }
+ else
+ {
+   document.getElementById("errordiv").style.display='block';
+  }
+}
+</script>
+  
+  
+</head>
+<body>
+  <section class="container">
+    <div class="login">
+      <h1>Login to Test Automation Frameworks</h1>
+      <form name="loginform">
+        <p><input type="text" name="login" value="" placeholder="Username"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Remember me on this computer
+          </label>
+        </p>
+        <p class="submit"><input type="button" name="commit" value="Login" onClick="check(this.form)"></p>
+		<br>
+		<div id="errordiv" style="DISPLAY: none">
+		<p id="errormsg" >Incorrect username or password!</p>
+		</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="about">
+    <p class="about-links">
+      Evolution of a Test Automation Framework
+    </p>
+  </section>
+</body>
+</html>
