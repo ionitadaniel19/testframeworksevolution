@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPage():
-    def __init__(self,driver,url="http://localhost/autframeworks/index.html"):
+    def __init__(self,driver,url="http://localhost:81/autframeworks/index.html"):
         self.driver=driver
         self.driver.get(url)
 
